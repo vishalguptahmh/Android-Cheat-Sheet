@@ -1,30 +1,35 @@
-In Intent there must be a app to handle this rquest
+# Android Cheat Sheet 
 
 
-    if(intent.resolveActivity(getActivity().getPackageManager())!=null){
+#### In Intent there must be a app to handle this rquest
+
+
+```  
+if(intent.resolveActivity(getActivity().getPackageManager())!=null){
        startActivity(intent);
     }
-
-
-For complete scroll of card in recycler view
-
     
+```
+
+#### For complete scroll of card in recycler view
+
+``` 
     SnapHelper snapHelper = new StartSnapHelper();
     snapHelper.attachToRecyclerView(binding.recyclerView);
 
+```
 
 
 
 
-
-For touch effect
-
+#### For touch effect
+```
            android:foreground="?android:attr/selectableItemBackground"
+```
 
 
-
-For expandable view
-    
+#### For expandable view
+  ```  
      <at.blogc.android.views.ExpandableTextView
                        android:id="@+id/comment"
                        android:layout_marginStart="@dimen/_4sdp"
@@ -47,12 +52,12 @@ now from code
 
     binding.comment.toggle();//to expand and collapse
 
+```
 
 
+#### on implements Obervable
 
-on implements Obervable
-
-    
+```  
     
        // FROM BASE OBSERVABLE
         @Ignore
@@ -79,11 +84,12 @@ on implements Obervable
            }
        }
 
+```
 
 
+#### Change the color of progressbar from xml
 
-Change the color of progressbar from xml
-
+```
     <ProgressBar
                    android:indeterminate="true"
                    android:indeterminateTint="@color/white"
@@ -98,12 +104,13 @@ Change the color of progressbar from xml
     
     
 
+```
 
 
 
+#### Gender spinner Selector
 
-Gender spinner Selector
-
+```
     setupPopupMenu(constantUnit.getShow(),view).setOnMenuItemClickListener(item -> {
        view.setText(item.getTitle());
        userSpecificDetails.setGender(constantUnit.getServer().get(constantUnit.getServer().indexOf(item.getTitle().toString())));
@@ -149,11 +156,12 @@ Gender spinner Selector
            android:textSize="@dimen/_12sdp" />
     </android.support.design.widget.TextInputLayout>
 
+```
 
 
+#### Date
 
-Date
-
+```
     import android.text.format.DateFormat;
     String dayOfTheWeek = (String) DateFormat.format("EEEE", date); // Thursday 
     String day = (String) DateFormat.format("dd", date); // 20
@@ -161,10 +169,11 @@ Date
     String monthNumber = (String) DateFormat.format("MM", date); // 06 
     String year = (String) DateFormat.format("yyyy", date); // 2013
 
+```
 
+#### Add Event to Google Calender
 
-Add Event to Google Calender
-
+```
     public void addEvent( String title, String description, long startTime,
                          long endTime) {
        try {
@@ -198,14 +207,15 @@ Add Event to Google Calender
     }
     
 
+```
 
 
 
 
 
+#### Alert Dialog Box
 
-Alert Dialog Box
-
+```
     new AlertDialog.Builder(getActivity(), R.style.AlertDialogTheme)
            .setTitle("Sync Events To Calender ?")
            .setMessage("Your current Date events are added to calendar")
@@ -223,11 +233,12 @@ Alert Dialog Box
            })
            .show();
 
+```
 
 
+#### Adapter to convert object to string
 
-Adapter to convert object to string
-
+```
     public static class CustomAdapter implements TypeAdapterFactory {
        @Override
        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
@@ -268,9 +279,11 @@ Adapter to convert object to string
     }
 
 
+```
 
-DateAgo Function
 
+#### DateAgo Function
+```
     public static String getDayAgoTime(String yyy_dd_MMTO_HH_MM_Z)
     {
        try {
@@ -341,15 +354,16 @@ DateAgo Function
 
 
 
+```
 
 
 
 
 
 
+#### EditText
 
-EditText
-
+```
     <android.support.design.widget.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -375,7 +389,7 @@ EditText
            
     </android.support.design.widget.TextInputLayout>
 
-
+```
 
 
 
