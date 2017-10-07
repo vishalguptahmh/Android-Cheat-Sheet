@@ -20,7 +20,15 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 ```
 
 
+#### For animation in visible and invisible layout
 
+apply to those layout for which layout length gets changes
+
+```
+
+    android:animateLayoutChanges="true"
+
+```
 
 #### For touch effect
 ```
