@@ -402,3 +402,7 @@ now from code
 
 
 
+
+
+#### Text Color Percentage
+![alt text](Screen Shot 2017-10-23 at 10.15.26 AM.png)
