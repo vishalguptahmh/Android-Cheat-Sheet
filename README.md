@@ -16,8 +16,15 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 ``` 
     SnapHelper snapHelper = new StartSnapHelper();
     snapHelper.attachToRecyclerView(binding.recyclerView);
-
 ```
+
+
+#### In Rotation Data remain Same
+
+``` 
+     android:configChanges="orientation|keyboardHidden|screenSize"
+```
+
 
 
 #### For animation in visible and invisible layout
@@ -25,9 +32,7 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 apply to those layout for which layout length gets changes
 
 ```
-
     android:animateLayoutChanges="true"
-
 ```
 
 #### For touch effect
@@ -66,7 +71,6 @@ now from code
 #### on implements Obervable
 
 ```  
-    
        // FROM BASE OBSERVABLE
         @Ignore
         private transient PropertyChangeRegistry mCallbacks;
@@ -109,8 +113,6 @@ now from code
                    android:layout_marginEnd="@dimen/_12sdp"
                    android:layout_below="@+id/coverImage"
                    />
-    
-    
 
 ```
 
@@ -359,8 +361,6 @@ now from code
        }
        return null;
     }
-
-
 
 ```
 
