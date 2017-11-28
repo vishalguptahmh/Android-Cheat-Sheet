@@ -40,6 +40,12 @@ apply to those layout for which layout length gets changes
            android:foreground="?android:attr/selectableItemBackground"
 ```
 
+#### To create Edittext mulitiline put this in edittext
+```
+android:inputType="textMultiLine"
+
+```
+
 
 #### For expandable view
   ```  
