@@ -47,6 +47,7 @@ android:inputType="textMultiLine"
 ```
 
 
+
 #### For expandable view
   ```  
      <at.blogc.android.views.ExpandableTextView
@@ -406,7 +407,26 @@ now from code
 ```
 
 
+#### call Intent
+```
 
+  binding.customerPhone.setOnClickListener(v->{
+
+            if(PermissionUtils.isPhonePermissionGranted(getActivity())){
+                Log.d(TAG, "callCustomer: ");
+//            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel" , appData.getCheckOnGoingRide().getCustomerId().getPhone(),null));
+
+                if(intent.resolveActivity(getActivity().getPackageManager())!=null){
+                    startActivity(intent);
+                }
+
+
+            }
+
+        });
+        
+```
 
 
 
