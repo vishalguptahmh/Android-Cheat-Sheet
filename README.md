@@ -43,6 +43,22 @@ apply to those layout for which layout length gets changes
 #### To create Edittext mulitiline put this in edittext
 ```
 android:inputType="textMultiLine"
+//put this in mainfeast > > activity
+
+```
+
+#### Delay Timer
+```
+    void delayFragmentClosing(){
+
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                /* put code that will implemented after 2 sec */
+              closeFragment();
+            }
+        }, 2000);
+    }
 
 ```
 
