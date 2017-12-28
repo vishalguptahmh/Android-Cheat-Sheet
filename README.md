@@ -465,7 +465,13 @@ now from code
         
 ```
 
-
+#### Error CertPathValidatorException : Trust anchor for certificate path not found - Retrofit Android
+### send ssl certificate with retrofit
+```
+with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39
+or download
+![https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39] link
+```
 
 #### Text Color Percentage
 ![alt text](Screen Shot 2017-10-23 at 10.15.26 AM.png)
