@@ -69,6 +69,16 @@ android:inputType="textMultiLine"
 
 ```
 
+
+#### Adding Multiple Name In A Model Using SerializableName
+
+
+```
+//here we can use _id and driverId
+   @SerializedName(value = "_id" , alternate = {"driverId"})
+    private String driverId;
+    
+```
 #### Encrypt and Decrypt Strings
 
 ```
