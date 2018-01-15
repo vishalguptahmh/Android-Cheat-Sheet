@@ -481,7 +481,7 @@ now from code
 with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39
 or download
 ```
-![alt text](self signing client builder certificate (Ok http ssl client certificate))
+![Self Signing ssl Certificate ](self signing client builder certificate (Ok http ssl client certificate))
 
 
 #### Text Color Percentage
