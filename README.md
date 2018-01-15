@@ -480,8 +480,9 @@ now from code
 ```
 with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39
 or download
-![https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39] link
 ```
+![alt text](self signing client builder certificate (Ok http ssl client certificate))
+
 
 #### Text Color Percentage
 ![alt text](Screen Shot 2017-10-23 at 10.15.26 AM.png)
