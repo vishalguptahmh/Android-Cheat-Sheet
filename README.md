@@ -94,7 +94,38 @@ android:inputType="textMultiLine"
 
 ```
 
+#### Device Width
 
+```
+    public int  displayWidth(){
+        DisplayMetrics metrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int dp = Math.round(width / ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+        return dp;
+    }
+    
+
+```
+
+#### convert px to dp and dp to px  
+```
+
+public static float convertPixelsToDp(float px, Context context){
+    Resources resources = context.getResources();
+    DisplayMetrics metrics = resources.getDisplayMetrics();
+    float dp = px / ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+    return dp;
+}
+
+public static float convertDpToPixel(float dp, Context context){
+    Resources resources = context.getResources();
+    DisplayMetrics metrics = resources.getDisplayMetrics();
+    float px = dp * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+    return px;
+}
+
+```
 #### For expandable view
   ```  
      <at.blogc.android.views.ExpandableTextView
