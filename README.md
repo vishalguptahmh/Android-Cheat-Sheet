@@ -1,5 +1,10 @@
 # Android Cheat Sheet 
 
+#### Notification auto generator 
+
+Template link  : ![Auto notifiction generator ](https://gitlab.com/vishalguptahmh/notification_auto_generate)
+
+
 
 #### In Intent there must be a app to handle this rquest
 
