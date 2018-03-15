@@ -52,6 +52,17 @@ android:inputType="textMultiLine"
 
 ```
 
+
+#### To Remove Previous Intents
+
+```
+ Intent intent = new Intent(getActivity(), DashboardActivity.class);
+intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP  | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+startActivity(intent);
+getActivity().finish();
+                                        
+ ```
+
 #### Delay Timer
 ```
     void delayFragmentClosing(){
