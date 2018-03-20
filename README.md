@@ -536,6 +536,46 @@ now from code
 
 ```
 
+####Animation
+```
+public class dashboard{
+
+    Animation startRotateAnimation;
+
+public  create view(){
+
+
+         startRotateAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.android_rotate_animation);
+
+
+startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinking_animation);
+
+
+
+onclick->{
+ binding.containerRecordingSign.setVisibility(View.VISIBLE);
+                    binding.containerRecordingSign.setAnimation(startAnimation);
+                    startAnimation.start();
+}
+
+dismissanimation{
+
+     binding.containerRecordingSign.setVisibility(View.GONE);
+                    binding.containerRecordingSign.clearAnimation();
+
+or 
+
+              binding.containerRecordingSign.setVisibility(View.GONE);
+                    binding.containerRecordingSign.clearAnimation();
+                    startAnimation.cancel();
+                    startAnimation.reset();
+}
+
+}
+
+
+}
+```
 
 #### call Intent
 ```
