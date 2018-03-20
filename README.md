@@ -562,6 +562,31 @@ now from code
 
 ```
 
+#### Make dialogFragment full page
+
+```
+setStyle(DialogFragment.STYLE_NORMAL, R.style.MY_DIALOG);
+<style name="MY.DIALOG" parent="android:Theme" >
+   <item name="android:windowNoTitle">true</item>
+   <item name="android:windowFullscreen">true</item>
+   <item name="android:windowIsFloating">false</item>
+</style>
+
+
+@Override
+public void onStart() {
+   super.onStart();
+   Dialog d = getDialog();
+   if (d!=null){
+       int width = ViewGroup.LayoutParams.MATCH_PARENT;
+       int height = ViewGroup.LayoutParams.MATCH_PARENT;
+       d.getWindow().setLayout(width, height);
+   }
+}
+
+
+```
+
 ####Animation
 ```
 public class dashboard{
