@@ -282,6 +282,42 @@ now from code
 
 ```
 
+####Broadcast
+
+
+```
+//to receview broadcast
+
+    private void mLocalBroadcastUnregister() {
+        LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(mMessageReciver);
+    }
+
+    private void mLocalBroadcastRegister() {
+        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mMessageReciver, new IntentFilter("FLAG_NEW_REQUEST"));
+        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mMessageReciver, new IntentFilter("FLAG_CUSTOMER_CANCELLED_REQUEST"));
+    }
+
+    private BroadcastReceiver mMessageReciver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            if(intent.getStringExtra("FLAG_CUSTOMER_CANCELLED_REQUEST")!=null){
+              close();
+            }
+
+        }
+    };
+    
+    //To send broad cast
+    
+     Intent intent = new Intent();
+                        intent.putExtra("FLAG_NEW_REQUEST",FLAG_NEW_REQUEST);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+    
+```
+
+
 #### Add Event to Google Calender
 
 ```
