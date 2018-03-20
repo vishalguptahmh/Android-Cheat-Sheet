@@ -63,6 +63,13 @@ getActivity().finish();
                                         
  ```
 
+#### Country code From Local Android
+```
+
+String locale = context.getResources().getConfiguration().locale.getCountry();
+
+```
+
 #### Delay Timer
 ```
     void delayFragmentClosing(){
@@ -140,6 +147,25 @@ public static float convertDpToPixel(float dp, Context context){
     float px = dp * ((float)metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     return px;
 }
+
+```
+
+
+#### Check screen is off or on 
+```
+private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
+   @Override
+   public void onReceive(Context context, Intent intent) {
+       if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+           Log.i("Websocket", "Screen ON");
+           openConnection();
+       } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+           Log.i("Websocket", "Screen OFF");
+           closeConnection();
+       }
+   }
+};
+
 
 ```
 #### For expandable view
