@@ -295,6 +295,60 @@ now from code
 
 ```
 
+#### Spinner adapter 
+
+```
+    /* --  spinner Department   -- */
+    public void spinerDepartment(){
+
+        List<String> list = new ArrayList<String>();
+        list.add("list 4");
+        list.add("list 5");
+        list.add("list 6");
+
+        ArrayAdapter<String> userTypeAdapter;
+        
+        userTypeAdapter= new ArrayAdapter<String>(getActivity(),
+                R.layout.spinner_item, list);
+        userTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.spinnerDepartment.setAdapter(userTypeAdapter);
+
+
+
+        binding.spinnerDepartment.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                String item=adapterView.getItemAtPosition(i).toString();
+                showSnackBar(item);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+    }
+
+
+
+       <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinnerDepartment"
+                    android:layout_below="@id/txtDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:layout_toEndOf="@id/UsertypeCenterPoint"
+                    android:layout_height="wrap_content"
+                    >
+                </android.support.v7.widget.AppCompatSpinner>
+
+
+
+```
 
 #### Date
 
