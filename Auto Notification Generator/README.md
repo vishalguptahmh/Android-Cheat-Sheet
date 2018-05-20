@@ -1,6 +1,5 @@
 
-
-this notification Generator in 
+Put notification Generator in 
 
 
 C:\Program Files\Android\Android Studio\plugins\android\lib\templates\
