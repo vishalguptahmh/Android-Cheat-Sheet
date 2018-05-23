@@ -704,7 +704,7 @@ or
 with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39
 or download
 ```
-![Self Signing ssl Certificate ](self signing client builder certificate (Ok http ssl client certificate))
+![Self Signing ssl Certificate ](https://github.com/vishalguptahmh/AndroidCheatSheet/blob/master/self%20signing%20client%20builder%20certificate%20(Ok%20http%20ssl%20client%20certificate))
 
 
 #### Text Color Percentage
