@@ -708,4 +708,4 @@ or download
 
 
 #### Text Color Percentage
-![alt text](Screen Shot 2017-10-23 at 10.15.26 AM.png)
+![screenshot](https://github.com/vishalguptahmh/AndroidCheatSheet/blob/master/Screen%20Shot%202017-10-23%20at%2010.15.26%20AM.png)
