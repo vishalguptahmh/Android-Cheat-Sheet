@@ -19,7 +19,7 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 
 #### In Rotation Data remain Same
 
-```java 
+```xml 
      android:configChanges="orientation|keyboardHidden|screenSize"
 ```
 
@@ -77,7 +77,7 @@ String locale = context.getResources().getConfiguration().locale.getCountry();
 ```
 
 #### Rs sign 
-```java
+```xml
 <string name="Rs">\u20B9</string>
 
 ```
@@ -159,7 +159,7 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
 ```
 #### For expandable view
 
-```java  
+```xml  
      <at.blogc.android.views.ExpandableTextView
                        android:id="@+id/comment"
                        android:layout_marginStart="@dimen/_4sdp"
@@ -178,8 +178,10 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
     
                        />
 
-now from code
+```
+```java
 
+//now from code
     binding.comment.toggle();//to expand and collapse
 
 ```
@@ -218,7 +220,7 @@ now from code
 
 #### Change the color of progressbar from xml
 
-```java
+```xml
     <ProgressBar
                    android:indeterminate="true"
                    android:indeterminateTint="@color/white"
@@ -254,10 +256,8 @@ now from code
        popup.show();
        return popup;
     }
-
-
-
-
+```
+```xml
     <android.support.design.widget.TextInputLayout
        android:id="@+id/profile_gender_container"
        android:layout_width="match_parent"
@@ -322,7 +322,8 @@ now from code
 
 
     }
-
+```
+```xml
 
 
        <android.support.v7.widget.AppCompatSpinner
@@ -335,8 +336,6 @@ now from code
                     android:layout_height="wrap_content"
                     >
                 </android.support.v7.widget.AppCompatSpinner>
-
-
 
 ```
 
@@ -577,7 +576,7 @@ now from code
 
 
 #### EditText
-```java
+```xml
     <android.support.design.widget.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -607,7 +606,7 @@ now from code
 
 #### Make dialogFragment full page
 
-```java
+```xml
 setStyle(DialogFragment.STYLE_NORMAL, R.style.MY_DIALOG);
 <style name="MY.DIALOG" parent="android:Theme" >
    <item name="android:windowNoTitle">true</item>
@@ -615,7 +614,8 @@ setStyle(DialogFragment.STYLE_NORMAL, R.style.MY_DIALOG);
    <item name="android:windowIsFloating">false</item>
 </style>
 
-
+```
+```java
 @Override
 public void onStart() {
    super.onStart();
@@ -632,42 +632,33 @@ public void onStart() {
 
 #### Animation
 ```java
-public class dashboard{
+public class dashboard {
 
     Animation startRotateAnimation;
 
-public  create view(){
+    public create view() {
 
+        startRotateAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.android_rotate_animation);
 
-         startRotateAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.android_rotate_animation);
+        startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinking_animation);
 
+        onclick - > {
+            binding.containerRecordingSign.setVisibility(View.VISIBLE);
+            binding.containerRecordingSign.setAnimation(startAnimation);
+            startAnimation.start();
+        }
 
-startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinking_animation);
+        dismissanimation {
 
-
-
-onclick->{
- binding.containerRecordingSign.setVisibility(View.VISIBLE);
-                    binding.containerRecordingSign.setAnimation(startAnimation);
-                    startAnimation.start();
-}
-
-dismissanimation{
-
-     binding.containerRecordingSign.setVisibility(View.GONE);
-                    binding.containerRecordingSign.clearAnimation();
-
-or 
-
-              binding.containerRecordingSign.setVisibility(View.GONE);
-                    binding.containerRecordingSign.clearAnimation();
-                    startAnimation.cancel();
-                    startAnimation.reset();
-}
-
-}
-
-
+            binding.containerRecordingSign.setVisibility(View.GONE);
+            binding.containerRecordingSign.clearAnimation();
+            //or
+            binding.containerRecordingSign.setVisibility(View.GONE);
+            binding.containerRecordingSign.clearAnimation();
+            startAnimation.cancel();
+            startAnimation.reset();
+        }
+    }
 }
 ```
 
@@ -692,9 +683,9 @@ or
         
 ```
 
-#### Error CertPathValidatorException : Trust anchor for certificate path not found - Retrofit Android
-### send ssl certificate with retrofit
+###  send ssl certificate with retrofit
 
+> #### Error CertPathValidatorException : Trust anchor for certificate path not found - Retrofit Android
 > with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39 or download [From here.](https://github.com/vishalguptahmh/AndroidCheatSheet/blob/master/self%20signing%20client%20builder%20certificate%20(Ok%20http%20ssl%20client%20certificate " Self Sigining Certificate ")
 
 
