@@ -2,9 +2,7 @@
 
 
 #### In Intent there must be a app to handle this rquest
-
-
-```  
+```java  
 if(intent.resolveActivity(getActivity().getPackageManager())!=null){
        startActivity(intent);
     }
@@ -13,7 +11,7 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 
 #### For complete scroll of card in recycler view
 
-``` 
+```java 
     SnapHelper snapHelper = new StartSnapHelper();
     snapHelper.attachToRecyclerView(binding.recyclerView);
 ```
@@ -21,7 +19,7 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 
 #### In Rotation Data remain Same
 
-``` 
+```java 
      android:configChanges="orientation|keyboardHidden|screenSize"
 ```
 
@@ -29,19 +27,19 @@ if(intent.resolveActivity(getActivity().getPackageManager())!=null){
 
 #### For animation in visible and invisible layout
 
-apply to those layout for which layout length gets changes
+> apply to those layout for which layout length gets changes
+```java 
 
-```
     android:animateLayoutChanges="true"
 ```
 
 #### For touch effect
-```
+```java
            android:foreground="?android:attr/selectableItemBackground"
 ```
 
 #### To create Edittext mulitiline put this in edittext
-```
+```java
 android:inputType="textMultiLine"
 //put this in mainfeast > > activity
 
@@ -50,7 +48,7 @@ android:inputType="textMultiLine"
 
 #### To Remove Previous Intents
 
-```
+```java
  Intent intent = new Intent(getActivity(), DashboardActivity.class);
 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP  | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
 startActivity(intent);
@@ -59,14 +57,12 @@ getActivity().finish();
  ```
 
 #### Country code From Local Android
-```
-
+```java
 String locale = context.getResources().getConfiguration().locale.getCountry();
-
 ```
 
 #### Delay Timer
-```
+```java
     void delayFragmentClosing(){
 
         new Handler().postDelayed(new Runnable(){
@@ -81,8 +77,7 @@ String locale = context.getResources().getConfiguration().locale.getCountry();
 ```
 
 #### Rs sign 
-
-```
+```java
 <string name="Rs">\u20B9</string>
 
 ```
@@ -91,15 +86,14 @@ String locale = context.getResources().getConfiguration().locale.getCountry();
 #### Adding Multiple Name In A Model Using SerializableName
 
 
-```
+```java
 //here we can use _id and driverId
    @SerializedName(value = "_id" , alternate = {"driverId"})
     private String driverId;
     
 ```
 #### Encrypt and Decrypt Strings
-
-```
+```java
     public static String encrypt(String input) {
         // This is base64 encoding, which is not an encryption
         return Base64.encodeToString(input.getBytes(), Base64.DEFAULT);
@@ -114,7 +108,7 @@ String locale = context.getResources().getConfiguration().locale.getCountry();
 
 #### Device Width
 
-```
+```java
     public int  displayWidth(){
         DisplayMetrics metrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -127,7 +121,7 @@ String locale = context.getResources().getConfiguration().locale.getCountry();
 ```
 
 #### convert px to dp and dp to px  
-```
+```java
 
 public static float convertPixelsToDp(float px, Context context){
     Resources resources = context.getResources();
@@ -147,7 +141,7 @@ public static float convertDpToPixel(float dp, Context context){
 
 
 #### Check screen is off or on 
-```
+```java
 private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
    @Override
    public void onReceive(Context context, Intent intent) {
@@ -164,7 +158,8 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
 
 ```
 #### For expandable view
-  ```  
+
+```java  
      <at.blogc.android.views.ExpandableTextView
                        android:id="@+id/comment"
                        android:layout_marginStart="@dimen/_4sdp"
@@ -192,7 +187,7 @@ now from code
 
 #### on implements Obervable
 
-```  
+```java  
        // FROM BASE OBSERVABLE
         @Ignore
         private transient PropertyChangeRegistry mCallbacks;
@@ -223,7 +218,7 @@ now from code
 
 #### Change the color of progressbar from xml
 
-```
+```java
     <ProgressBar
                    android:indeterminate="true"
                    android:indeterminateTint="@color/white"
@@ -242,7 +237,7 @@ now from code
 
 #### Gender spinner Selector
 
-```
+```java
     setupPopupMenu(constantUnit.getShow(),view).setOnMenuItemClickListener(item -> {
        view.setText(item.getTitle());
        userSpecificDetails.setGender(constantUnit.getServer().get(constantUnit.getServer().indexOf(item.getTitle().toString())));
@@ -292,7 +287,7 @@ now from code
 
 #### Spinner adapter 
 
-```
+```java
     /* --  spinner Department   -- */
     public void spinerDepartment(){
 
@@ -347,7 +342,7 @@ now from code
 
 #### Date
 
-```
+```java
     import android.text.format.DateFormat;
     String dayOfTheWeek = (String) DateFormat.format("EEEE", date); // Thursday 
     String day = (String) DateFormat.format("dd", date); // 20
@@ -360,7 +355,7 @@ now from code
 #### Broadcast
 
 
-```
+```java
 //to receview broadcast
 
     private void mLocalBroadcastUnregister() {
@@ -395,7 +390,7 @@ now from code
 
 #### Add Event to Google Calender
 
-```
+```java
     public void addEvent( String title, String description, long startTime,
                          long endTime) {
        try {
@@ -437,7 +432,7 @@ now from code
 
 #### Alert Dialog Box
 
-```
+```java
     new AlertDialog.Builder(getActivity(), R.style.AlertDialogTheme)
            .setTitle("Sync Events To Calender ?")
            .setMessage("Your current Date events are added to calendar")
@@ -460,7 +455,7 @@ now from code
 
 #### Adapter to convert object to string
 
-```
+```java
     public static class CustomAdapter implements TypeAdapterFactory {
        @Override
        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
@@ -505,7 +500,7 @@ now from code
 
 
 #### DateAgo Function
-```
+```java
     public static String getDayAgoTime(String yyy_dd_MMTO_HH_MM_Z)
     {
        try {
@@ -582,8 +577,7 @@ now from code
 
 
 #### EditText
-
-```
+```java
     <android.support.design.widget.TextInputLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -613,7 +607,7 @@ now from code
 
 #### Make dialogFragment full page
 
-```
+```java
 setStyle(DialogFragment.STYLE_NORMAL, R.style.MY_DIALOG);
 <style name="MY.DIALOG" parent="android:Theme" >
    <item name="android:windowNoTitle">true</item>
@@ -637,7 +631,7 @@ public void onStart() {
 ```
 
 #### Animation
-```
+```java
 public class dashboard{
 
     Animation startRotateAnimation;
@@ -678,7 +672,7 @@ or
 ```
 
 #### call Intent
-```
+```java
 
   binding.customerPhone.setOnClickListener(v->{
 
@@ -700,11 +694,10 @@ or
 
 #### Error CertPathValidatorException : Trust anchor for certificate path not found - Retrofit Android
 ### send ssl certificate with retrofit
-```
-with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39
-or download
-```
-![Self Signing ssl Certificate ](https://github.com/vishalguptahmh/AndroidCheatSheet/blob/master/self%20signing%20client%20builder%20certificate%20(Ok%20http%20ssl%20client%20certificate))
+
+> with link https://gist.github.com/nowke/75037c42171d9ea5ce87a49a982c4c39 or download [From here.](https://github.com/vishalguptahmh/AndroidCheatSheet/blob/master/self%20signing%20client%20builder%20certificate%20(Ok%20http%20ssl%20client%20certificate " Self Sigining Certificate ")
+
+
 
 
 #### Text Color Percentage
