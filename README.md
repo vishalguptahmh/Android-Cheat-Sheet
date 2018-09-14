@@ -265,6 +265,7 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginEnd="@dimen/_16sdp"
+       android:hint="Gender"                                            
        android:layout_marginStart="@dimen/_16sdp"
        foo:hintTextAppearance="@style/MyHintLayout">
 
@@ -278,7 +279,7 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
            android:enabled="@{editor.makeEditable ? true : false}"
            android:focusable="false"
            android:focusableInTouchMode="false"
-           android:hint="Gender"
+           
            android:inputType="textAutoComplete|textCapSentences"
            android:longClickable="false"
            android:text="@{model.gender}"
@@ -586,6 +587,7 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
        android:layout_marginStart="@dimen/_16sdp"
        android:layout_marginTop="@dimen/_8sdp"
        android:background="@android:color/transparent"
+       android:hint="hint"//it is nescessary in os 8(oreo)
        android:clickable="true">
        
        <EditText
@@ -596,7 +598,6 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
            android:layout_marginRight="@dimen/_4sdp"
            android:backgroundTint="@color/appBackgroundColor"
            android:ellipsize="end"
-           android:hint="hint"
            android:inputType="textAutoComplete|textCapSentences"
            android:maxLength="50"
            android:text=""
