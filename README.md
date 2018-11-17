@@ -5,6 +5,8 @@
 
 #### [HighLighKeyWord](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
 
+#### [Image Zoom Android](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
+
 ####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
 
 #### [Android Dagger 2 Tutorial](https://github.com/vishalguptahmh/Android-Dagger2-Tutorial)
