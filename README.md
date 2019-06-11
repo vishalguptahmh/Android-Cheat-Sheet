@@ -358,12 +358,43 @@ private BroadcastReceiver screenStateReceiver = new BroadcastReceiver() {
 
 ```java
     import android.text.format.DateFormat;
-    String dayOfTheWeek = (String) DateFormat.format("EEEE", date); // Thursday 
+    String dayOfTheWeek = (String) DateFormat.format("EEEE EEE", date); // Thursday Thur
     String day = (String) DateFormat.format("dd", date); // 20
     String monthString = (String) DateFormat.format("MMM", date); // Jun 
     String monthNumber = (String) DateFormat.format("MM", date); // 06 
     String year = (String) DateFormat.format("yyyy", date); // 2013
+    String time = (String) DateFormat.format(""h:mm a", date); // 12:08 PM
+    
 
+```
+
+### Date formating according to today , next week , month like instagram
+
+```java
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+  public static String getDateDifference(Calendar calendar) {
+        Date d = calendar.getTime();
+        Calendar lastMonth = Calendar.getInstance(Locale.getDefault());
+        Calendar lastWeek = Calendar.getInstance(Locale.getDefault());
+        Calendar recent = Calendar.getInstance(Locale.getDefault());
+        lastMonth.add(Calendar.DAY_OF_MONTH, -(Calendar.DAY_OF_MONTH));
+        lastWeek.add(Calendar.DAY_OF_MONTH, -7);
+        recent.add(Calendar.DAY_OF_MONTH, -1);
+        if (calendar.before(lastMonth)) {
+            return new SimpleDateFormat("MMMM yyyy").format(d);
+        } else if (calendar.after(lastMonth) && calendar.before(lastWeek)) {
+            return "Last Month";
+        } else if (calendar.after(lastWeek) && calendar.before(recent)) {
+            return "Last Week";
+        } else {
+            return "Today";
+        }
+    }
+    
 ```
 
 #### Broadcast
