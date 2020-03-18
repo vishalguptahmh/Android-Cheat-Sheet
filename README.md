@@ -5,17 +5,19 @@
 
 #### [HighLighKeyWord](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki) 
 
-<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/blob/master/Images/hightlightword.jpg" width="35%">.
+<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/blob/master/Images/hightlightword.jpg" width="25%">.
 
 #### [Image Zoom Android](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
 
-<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/imagepinchzoom.gif" width="35%">.
+<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/imagepinchzoom.gif" width="20%">.
 
 ####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
 
 #### [Android Dagger 2 Tutorial](https://github.com/vishalguptahmh/Android-Dagger2-Tutorial)
 
 #### Handle your phone from your pc using [scrcpy](https://github.com/Genymobile/scrcpy),it will help you to demostrate in video conferencing or you can use [vysor](https://www.vysor.io) or [Apower](https://www.apowersoft.com/phone-mirror) , it is paid but you can use some features in trial version.
+<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/scrcpy%20or%20visor.png" width="55%">.
+
 
 ## Some Important Code Scripts
 
