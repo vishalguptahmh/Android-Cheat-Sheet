@@ -3,9 +3,13 @@
 
 ## Some Important Links
 
-#### [HighLighKeyWord](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
+#### [HighLighKeyWord](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki) 
+
+<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/blob/master/Images/hightlightword.jpg" width="35%">.
 
 #### [Image Zoom Android](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
+
+<img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/imagepinchzoom.gif" width="35%">.
 
 ####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
 
