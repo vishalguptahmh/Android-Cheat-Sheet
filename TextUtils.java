@@ -5,6 +5,7 @@ package com.charpixel.baseandroidproject.common;
  */
 
 public class TextUtils {
+    
 
     public static boolean isBlank(String value) {
         return value == null || value.trim().length() == 0;
