@@ -18,7 +18,8 @@
 #### Handle your phone from your pc using [scrcpy](https://github.com/Genymobile/scrcpy),it will help you to demostrate in video conferencing or you can use [vysor](https://www.vysor.io) or [Apower](https://www.apowersoft.com/phone-mirror) , it is paid but you can use some features in trial version.
 <img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/scrcpy%20or%20visor.png" width="55%">.
 
-
+#### [BIOMETRIC AND FACE AUTHENTICATION](https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face)
+<img src="https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face/blob/master/viedo.gif" width="20%">.
 ## Some Important Code Scripts
 
 #### In Intent there must be a app to handle this rquest
