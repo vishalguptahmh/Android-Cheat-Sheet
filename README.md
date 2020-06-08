@@ -20,6 +20,8 @@
 
 #### [BIOMETRIC AND FACE AUTHENTICATION](https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face)
 <img src="https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face/blob/master/viedo.gif" width="20%">.
+<img src="https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face/blob/master/face.gif" width="17%">.
+
 ## Some Important Code Scripts
 
 #### In Intent there must be a app to handle this rquest
