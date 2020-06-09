@@ -68,6 +68,17 @@ android:inputType="textMultiLine"
 
 ```
 
+#### Add activity to backstack
+It will start with Notification Activity and when you press back then MainActivity will open
+```java
+       Intent intentA=new Intent(context,MainActivity.class);
+       Intent intentB=new Intent(context,NotificationActivity.class);
+       
+       TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+       stackBuilder.addNextIntent(intentA);
+       stackBuilder.addNextIntent(intentB);
+       context.startActivities(stackBuilder.getIntents());
+```
 
 #### To Remove Previous Intents
 
