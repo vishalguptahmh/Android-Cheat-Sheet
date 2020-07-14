@@ -760,17 +760,16 @@ dev adfs
 ```
 now you want to merge commit 1 and 2 into 1
 
+```
 git rebase -i HEAD~2
 
-//NOW FILE WILL OPEN THEN PUT 's' insted on pick in one commit  then save
+```
+NOW FILE WILL OPEN THEN PUT 's' insted on pick in one commit  then save
 
-//now new commit file will open for merge correction and i added hello3
+Now new commit file will open for merge correction and i added hello3    correct them then save 
 
-//correct them then save 
+its ready to go...after this source tree will show like this
 
-//its ready to go...
-
-after this source tree will show like this
 ```
 commit1 hello3 
 dev adfs
