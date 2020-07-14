@@ -749,6 +749,34 @@ public class dashboard {
         
 ```
 
+### git merge two commits into one
+
+
+```
+commit1 hello
+commit2 hello2
+dev adfs
+
+```
+now you want to merge commit 1 and 2 into 1
+
+git rebase -i HEAD~2
+
+//NOW FILE WILL OPEN THEN PUT 's' insted on pick in one commit  then save
+
+//now new commit file will open for merge correction and i added hello3
+
+//correct them then save 
+
+//its ready to go...
+
+after this source tree will show like this
+```
+commit1 hello3 
+dev adfs
+
+```
+
 ###  send ssl certificate with retrofit
 
 > #### Error CertPathValidatorException : Trust anchor for certificate path not found - Retrofit Android
