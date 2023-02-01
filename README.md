@@ -1,8 +1,11 @@
 # Cheat sheet for Android ||  Android Cheat Sheet 
 
 
-## Some Important Links
+# Some Important Links
 
+####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
+#### [Android code examples](https://github.com/IanDarwin/Android-Cookbook-Examples)
+#### [Interview Questions](https://github.com/amitshekhariitbhu/android-interview-questions)
 #### [HighLighKeyWord](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki) 
 
 <img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/blob/master/Images/hightlightword.jpg" width="25%">.
@@ -10,8 +13,6 @@
 #### [Image Zoom Android](https://github.com/vishalguptahmh/Android-Cheat-Sheet/wiki)
 
 <img src="https://github.com/vishalguptahmh/Android-Cheat-Sheet/raw/master/Images/imagepinchzoom.gif" width="20%">.
-
-####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
 
 #### [Android Dagger 2 Tutorial](https://github.com/vishalguptahmh/Android-Dagger2-Tutorial)
 
@@ -22,7 +23,8 @@
 <img src="https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face/blob/master/viedo.gif" width="20%">.
 <img src="https://github.com/vishalguptahmh/Android-device-authentication-biometric-and-face/blob/master/face.gif" width="17%">.
 
-## Some Important Code Scripts
+
+# Some Important Code Scripts
 
 #### In Intent there must be a app to handle this rquest
 ```java  
@@ -749,32 +751,6 @@ public class dashboard {
         
 ```
 
-### git merge two commits into one
-
-
-```
-commit1 hello
-commit2 hello2
-dev adfs
-
-```
-now you want to merge commit 1 and 2 into 1
-
-```
-git rebase -i HEAD~2
-
-```
-NOW FILE WILL OPEN THEN PUT 's' insted on pick in one commit  then save
-
-Now new commit file will open for merge correction and i added hello3    correct them then save 
-
-its ready to go...after this source tree will show like this
-
-```
-commit1 hello3 
-dev adfs
-
-```
 
 ###  send ssl certificate with retrofit
 
