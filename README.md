@@ -1,6 +1,19 @@
 # Cheat sheet for Android ||  Android Cheat Sheet 
 
 
+# Run Android studio faster 
+
+add below lines in gradle.properties 
+
+```groovy
+org.gradle.configureondemand=true # this will run only main module on you can check timing before and after by running in cmd ./gradlew assembleDebug --profile
+org.gradle.parallel=true # this will be usefull when you have multiple modules in project. 
+
+org.gradle.jvmargs=-Xmx8192m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8 # increasing heap size will make build faster
+
+```
+
+
 # Some Important Links
 
 ####  [Android Data Binding Tutorial](https://github.com/vishalguptahmh/Android-Data-Binding-Tutorial)
